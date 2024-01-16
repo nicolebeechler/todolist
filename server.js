@@ -19,6 +19,13 @@ mongoose.connection.once('open', () => {
     console.log('connected to mongodb')
 })
 
+app.get('/', function (req, res) {
+    res.send(`
+    <h1>To Do List</h1>
+    <h2><a href="/todos/new">Create To Do</a></h2>
+    `)
+})
+
 // INDUCES
 
 // INDEX
